@@ -1,0 +1,4 @@
+controller\InfoCollector.class
+model\Applicant.class
+controller\DecisionMaker.class
+model\ApplicantIO.class

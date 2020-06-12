@@ -1,0 +1,21 @@
+Applicant Name: Prof. Sun
+Email: Jialin_liu@yahoo.com
+IQ: 121 to 150
+Favorite Beverage: Water
+Super Power: [Super Strength, Time Travel, Coding]
+
+
+Applicant Name: Prof. Sun
+Email: a@a.com
+IQ: Less Than 120
+Favorite Beverage: Water
+Super Power: [Super Strength, Time Travel]
+
+
+Applicant Name: Prof. Sun
+Email: a@a.com
+IQ: Less Than 120
+Favorite Beverage: Water
+Super Power: [Time Travel]
+
+
