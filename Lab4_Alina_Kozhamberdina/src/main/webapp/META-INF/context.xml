@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/VipOrNotVip">
+  <!-- the database and tables that contains usernames and passwords -->
+  <Resource name="jdbc/javaEE" type="javax.sql.DataSource" auth="Container" 
+            driverClassName="com.mysql.cj.jdbc.Driver" 
+            url="jdbc:mysql://localhost:3306/javaEE?autoReconnect=true&amp;serverTimezone=UTC" 
+            username="root" password="password" 
+            logAbandoned="true" 
+            removeAbandoned="true" removmysqleAbandonedTimeout="60" 
+            maxActive="100" maxIdle="30" maxWait="10000" />
+  
+<Realm dataSourceName="jdbc/javaEE" localDataSource="true" 
+  className="org.apache.catalina.realm.DataSourceRealm" 
+  userTable="clients" userRoleTable="clientrole" 
+  userNameCol="clientname" roleNameCol="rolename" userCredCol="password" 
+  debug="99" /> 
+    
+</Context>

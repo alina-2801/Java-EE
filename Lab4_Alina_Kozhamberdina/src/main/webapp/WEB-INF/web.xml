@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <security-constraint>
+        <display-name>VIP</display-name>
+        <web-resource-collection>
+            <web-resource-name>VIP Page</web-resource-name>
+            <description/>
+            <url-pattern>/hellovip.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>VIP Role</description>
+            <role-name>vip</role-name>
+        </auth-constraint>
+        <user-data-constraint>
+            <description/>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+    <security-constraint>
+        <display-name>Not VIP</display-name>
+        <web-resource-collection>
+            <web-resource-name>Not VIP Page</web-resource-name>
+            <description/>
+            <url-pattern>/helloclient.jsp</url-pattern>
+        </web-resource-collection>
+    </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>java3</realm-name>
+        <form-login-config>
+            <form-login-page>/login.jsp</form-login-page>
+            <form-error-page>/login_error.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+    <security-role>
+        <description>VIP Users
+</description>
+        <role-name>vip</role-name>
+    </security-role>
+    <security-role>
+        <description>Not VIP Users
+</description>
+        <role-name>notvip</role-name>
+    </security-role>
+</web-app>
